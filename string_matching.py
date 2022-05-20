@@ -9,14 +9,14 @@ def kmpMatch(pattern, text):
     while (i < n):
         if (pattern[j] == text[i]):
             if (j == m - 1):
-                return True
+                return i - m + 1
             i += 1
             j += 1
         elif (j > 0):
             j = fail[j-1]
         else:
             i += 1
-    return False
+    return -1
 
 def computeFail(pattern):
     patternLength = len(pattern)
@@ -45,13 +45,13 @@ def bmMatch(pattern, text):
     i = m - 1
 
     if (i > n-1):
-        return False
+        return -1
     
     j = m - 1
     while True:
         if (pattern[j] == text[i]):
             if (j == 0):
-                return True
+                return i
             else:
                 i -= 1
                 j -= 1
@@ -61,7 +61,7 @@ def bmMatch(pattern, text):
             j = m -1
         if (i > n - 1):
             break
-    return False
+    return -1
 
 def buildLast(pattern):
     last = [-1 for i in range(256)]
@@ -70,12 +70,3 @@ def buildLast(pattern):
         last[ord(pattern[i])] = i
 
     return last
-
-pattern = input("Masukkan pattern: ")
-teks = input("Masukkan teks: ")
-print(bmMatch(pattern, teks))
-
-
-
-
-        
