@@ -5,8 +5,8 @@ from string_matching import kmpMatch, bmMatch
 try:
     conn = mariadb.connect(
         user="root",
-        password="Jakarta06",
-        host="LAPTOP-5P9LFIRM",
+        password="your_password",
+        host="your_host",
         port=1234,
         database="kata_baku"
     )
