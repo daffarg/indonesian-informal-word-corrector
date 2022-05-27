@@ -1,14 +1,16 @@
+import time
 import mariadb
 import sys
 from string_matching import kmpMatch, bmMatch
 
-try:
+# Connect to MariaDB Platform
+try: # change the arguments
     conn = mariadb.connect(
-        user="root",
-        password="your_password",
-        host="your_host",
-        port=1234,
-        database="kata_baku"
+        user="your_user", # your user
+        password="your_password", # your password
+        host="your_host", # your host
+        port=1234, # your port
+        database="your_database" # your database
     )
 except mariadb.Error as e:
     print(f"Error connecting to MariaDB Platform: {e}")
@@ -48,6 +50,7 @@ while True:
         continue
 
 # Lakukan pengoreksian kata tidak baku
+startTime = time.time()
 for i in range(len(lines)):
     for key in dictKata:
         if (algorithm == 1):
@@ -60,7 +63,9 @@ for i in range(len(lines)):
             if (oldWord[0].isupper()):
                 newWord = newWord.capitalize()            
             lines[i] = lines[i].replace(oldWord, newWord)
+elapsedTime = time.time() - startTime
 
-print("\nHasil pengoreksian kata tidak baku:\n")
+print(f"\nWaktu eksekusi: {elapsedTime} s")
+print("Hasil pengoreksian kata tidak baku:")
 for j in range(len(lines)):
     print(lines[j])

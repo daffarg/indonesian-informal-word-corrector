@@ -64,7 +64,7 @@ def bmMatch(pattern, text):
     return -1
 
 def buildLast(pattern):
-    last = [-1 for i in range(256)]
+    last = [-1 for i in range(128)]
 
     for i in range(len(pattern)):
         last[ord(pattern[i])] = i

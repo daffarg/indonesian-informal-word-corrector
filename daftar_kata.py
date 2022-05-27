@@ -1,3 +1,5 @@
+# Credit: https://github.com/lantip/baku-tidak-baku
+
 daftar = {
     "Alloh": "Allah",
     "Al Qur'an": "Alquran",
@@ -74,7 +76,7 @@ daftar = {
     "aquatik": "akuatik",
     "akutansi": "akuntansi",
     "akupuntur": "akupunktur",
-    "akuntan": "akutan",
+    "akutan": "akuntan",
     "alaram": "alarm",
     "alpha": "alfa",
     "aliyah": "aliah",
@@ -552,7 +554,6 @@ daftar = {
     "jumawa": "jemawa",
     "jenasah": "jenazah",
     "jendral": "jenderal",
-    "genius": "jenius",
     "zarafah": "jerapah",
     "zerafah": "jerapah",
     "jerembap": "jerembab",

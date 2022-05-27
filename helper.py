@@ -1,16 +1,18 @@
+# Insert daftar kata baku ke dalam database MariaDB
+
 # Module Imports
 import mariadb
 import sys
 from daftar_kata import daftar
 
 # Connect to MariaDB Platform
-try:
+try: # change the arguments
     conn = mariadb.connect(
-        user="root",
-        password="your_password",
-        host="your_host",
-        port=1234,
-        database="kata_baku"
+        user="your_user", # your user
+        password="your_password", # your password
+        host="your_host", # your host
+        port=1234, # your port
+        database="your_database" # your database
     )
 except mariadb.Error as e:
     print(f"Error connecting to MariaDB Platform: {e}")
