@@ -23,13 +23,13 @@
 5. Create a table in that database with the following attibutes: `id, tidak_baku, baku`
 6. Run `helper.py` to insert a dictionary of words in `daftar_kata.py` into the table with the following command:
 ```
-python helper.py
+py helper.py
 ```
 
 ## How to Run
 1. Run `main.py` with the following command:
 ```
-python main.py
+py main.py
 ```
 2. Enter the text file name
 3. Choose the algorithm
