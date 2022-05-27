@@ -1,5 +1,5 @@
-# Project Name
-> Python program to correct informal words in Indonesian. This program uses string matching algorithms i.e, Knuth-Morris-Pratt and Booyer-Moore algorithm to match informal words with Indonesian text.
+# Indonesian Informal Word Corrector
+> Python program to correct informal words in Indonesian text. This program uses string matching algorithms i.e, Knuth-Morris-Pratt and Booyer-Moore algorithm to match informal words within Indonesian text.
 
 ## Table of Contents
 * [Technologies Used](#technologies-used)
@@ -19,9 +19,15 @@
 ## Setup
 1. Install Python3 from [_here_](https://www.python.org/downloads/)
 2. Install MariaDB from [_here_](https://mariadb.org/download/?t=mariadb&p=mariadb&r=10.6.8&os=windows&cpu=x86_64&pkg=msi&m=nus)
+4. Create a database in MariaDB
+5. Create a table in that database with the following attibutes: `id, tidak_baku, baku`
+6. Run `helper.py` to insert a dictionary of words in `daftar_kata.py` into the table with the following command:
+```
+python helper.py
+```
 
 ## How to Run
-1. Run main.py with the following command:
+1. Run `main.py` with the following command:
 ```
 python main.py
 ```
@@ -39,7 +45,7 @@ Project is: _complete_
 
 
 ## Acknowledgements
-- Many thanks to [_Mr. Ivan Lanin_](https://github.com/ivanlanin) and [_Mr. Rony Lantip_](https://github.com/lantip) and for providing the list of formal and informal Indonesian word that can be accesed here [_here_](https://github.com/lantip/baku-tidak-baku)
+- Many thanks to [_Mr. Ivan Lanin_](https://github.com/ivanlanin) and [_Mr. Rony Lantip_](https://github.com/lantip) for providing the list of formal and informal Indonesian word that can be accesed here [_here_](https://github.com/lantip/baku-tidak-baku)
 
 
 ## Contact
